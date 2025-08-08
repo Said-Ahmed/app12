@@ -1,0 +1,16 @@
+from fastapi import HTTPException, status
+
+UserAlreadyExistsException = HTTPException(
+    status_code=status.HTTP_409_CONFLICT,
+    detail='Пользователь уже существует',
+)
+
+IncorrectEmailOrPasswordException = HTTPException(
+    status_code=status.HTTP_401_UNAUTHORIZED,
+    detail='Неверная почта или пароль',
+)
+
+UserNotFoundException = HTTPException(
+    status_code=status.HTTP_404_NOT_FOUND,
+    detail='Пользователь не найден'
+)
