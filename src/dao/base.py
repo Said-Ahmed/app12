@@ -44,7 +44,7 @@ class BaseDAO:
     async def update(cls, **data):
         async with async_session_maker() as session:
             try:
-                query = update(cls.model).values(**data).returning(cls.model)
+                query = update(cls.model).where(cls.model.id == data.pop('id')).values(**data).returning(cls.model)
                 result = await session.execute(query)
                 await session.commit()
                 return result.scalar_one()

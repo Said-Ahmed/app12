@@ -1,0 +1,14 @@
+alembic==1.15.1
+asyncpg==0.30.0
+fastapi==0.116.1
+passlib==1.7.4
+pydantic==2.11.7
+PyJWT==2.10.1
+pytest==8.4.1
+python-dotenv==1.1.1
+python_jose==3.4.0
+python_json_logger==3.3.0
+sqladmin==0.21.0
+SQLAlchemy==2.0.37
+starlette==0.47.2
+uvicorn==0.35.0

@@ -18,6 +18,7 @@ class SUserRegister(BaseModel):
             raise ValueError('Пароли не совпадают')
         return self
 
+
 class SUserAuth(BaseModel):
     email: EmailStr
     password: str
@@ -36,4 +37,4 @@ class SUserUpdate(BaseModel):
     first_name: str | None = None
     last_name: str | None = None
     middle_name: str | None = None
-    id_admin: bool = False
+    is_admin: bool = False
